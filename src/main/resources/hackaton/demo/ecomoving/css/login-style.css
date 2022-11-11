@@ -1,0 +1,41 @@
+.background-color {
+    -fx-background-color: #ff7c00;
+}
+
+.field-testo {
+    -fx-background-color: transparent;
+
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #ffa878;
+
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+.bottone-sign-in {
+    -fx-background-color: #dedede;
+    -fx-background-radius: 25px;
+
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.bottone-sign-in:hover {
+    -fx-text-fill: #ff5500;
+}
+
+.bottone-sign-up {
+    -fx-background-color: #dedede;
+    -fx-background-radius: 25px;
+
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.bottone-sign-up:hover {
+    -fx-text-fill: #ff5500;
+}

@@ -1,0 +1,60 @@
+.background-color {
+    -fx-background-color: #ff7c00;
+}
+
+.titolo {
+    -fx-font-size: 55px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.field-testo {
+    -fx-background-color: transparent;
+
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #ffa878;
+
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+.bottone-sign-up {
+    -fx-background-color: #dedede;
+    -fx-background-radius: 25px;
+
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.bottone-sign-up:hover {
+    -fx-text-fill: #ff5500;
+}
+
+.testo-normale {
+    -fx-font-size: 15px;
+    -fx-text-fill: rgba(255, 255, 255, 0.6);
+    -fx-font-weight: bold;
+}
+
+.check-box {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-radius:3px;
+}
+
+
+.check-box:selected .mark {
+    -fx-background-color: orange;
+
+}
+
+.check-box:selected .box {
+    -fx-background-color: white;
+}
+
