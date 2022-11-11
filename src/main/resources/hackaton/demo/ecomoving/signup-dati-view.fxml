@@ -9,41 +9,41 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.SignUpDatiController">
    <children>
       <VBox layoutX="75.0" layoutY="224.0" prefHeight="373.0" prefWidth="350.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
          <children>
-            <TextField promptText="nome" styleClass="field-testo">
+            <TextField fx:id="textFieldNome" alignment="CENTER" promptText="nome" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="cognome" styleClass="field-testo">
+            <TextField fx:id="textFieldCognome" alignment="CENTER" promptText="cognome" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="email" styleClass="field-testo">
+            <TextField fx:id="textFieldEmail" alignment="CENTER" promptText="email" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="data di nascita (gg/mm/yyyy)" styleClass="field-testo">
+            <TextField fx:id="textFieldDataDiNascita" alignment="CENTER" promptText="data di nascita (gg/mm/yyyy)" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="username" styleClass="field-testo">
+            <TextField fx:id="textFieldUsername" alignment="CENTER" promptText="username" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <PasswordField promptText="nuova password" styleClass="field-testo">
+            <PasswordField fx:id="passwordFieldPassword" alignment="CENTER" promptText="nuova password" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </PasswordField>
-            <PasswordField promptText="conferma password" styleClass="field-testo">
+            <PasswordField fx:id="passwordFieldConfermaPassword" alignment="CENTER" promptText="conferma password" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
@@ -51,6 +51,6 @@
          </children>
       </VBox>
       <Label layoutX="137.0" layoutY="83.0" styleClass="titolo" stylesheets="@css/signup-style.css" text="SIGN UP" />
-      <Button layoutX="199.0" layoutY="669.0" mnemonicParsing="false" styleClass="bottone-sign-up" text="CONTINUA" />
+      <Button fx:id="bottoneContinua" layoutX="199.0" layoutY="669.0" mnemonicParsing="false" onAction="#switchScenaTrasporto" styleClass="bottone-sign-up" text="CONTINUA" />
    </children>
 </AnchorPane>
