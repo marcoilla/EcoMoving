@@ -1,6 +1,8 @@
 package hackaton.demo.ecomoving.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 public class Utente {
     // attributi
@@ -10,6 +12,12 @@ public class Utente {
     private Date dataDiNascita;
     private String nome;
     private String cognome;
+
+    private String luogoDiResidenza;
+
+    private String luogoDiLavoro;
+
+    private ArrayList<String> mezziTrasporto;
 
     // costruttore
     public Utente(String username, String password, String email, Date dataDiNascita, String nome, String cognome) {
@@ -68,5 +76,37 @@ public class Utente {
 
     public void setCognome(String cognome) {
         this.cognome = cognome;
+    }
+
+    public String getLuogoDiResidenza() {
+        return luogoDiResidenza;
+    }
+
+    public void setLuogoDiResidenza(String luogoDiResidenza) {
+        this.luogoDiResidenza = luogoDiResidenza;
+    }
+
+    public String getLuogoDiLavoro() {
+        return luogoDiLavoro;
+    }
+
+    public void setLuogoDiLavoro(String luogoDiLavoro) {
+        this.luogoDiLavoro = luogoDiLavoro;
+    }
+
+    public ArrayList<String> getMezziTrasporto() {
+        return mezziTrasporto;
+    }
+
+    public void setMezziTrasporto(ArrayList<String> mezziTrasporto) {
+        this.mezziTrasporto = mezziTrasporto;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Utente utente = (Utente) o;
+        return username.equals(utente.username) && password.equals(utente.password) && email.equals(utente.email) && dataDiNascita.equals(utente.dataDiNascita) && nome.equals(utente.nome) && cognome.equals(utente.cognome) && luogoDiResidenza.equals(utente.luogoDiResidenza) && luogoDiLavoro.equals(utente.luogoDiLavoro) && mezziTrasporto.equals(utente.mezziTrasporto);
     }
 }

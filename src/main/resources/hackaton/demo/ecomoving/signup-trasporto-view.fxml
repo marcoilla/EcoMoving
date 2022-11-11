@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="89.0" layoutY="87.0" styleClass="titolo" text="TRASPORTO" />
@@ -51,6 +50,6 @@
             </CheckBox>
          </children>
       </VBox>
-      <Button layoutX="199.0" layoutY="564.0" mnemonicParsing="false" styleClass="bottone-sign-up" text="CONTINUA" />
+      <Button layoutX="200.0" layoutY="568.0" mnemonicParsing="false" styleClass="bottone-sign-up" text="CONFERMA" />
    </children>
 </AnchorPane>

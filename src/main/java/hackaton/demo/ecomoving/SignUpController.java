@@ -1,5 +1,13 @@
 package hackaton.demo.ecomoving;
 
-public class SignUpController {
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
+public class SignUpController {
+    // dichiarazione delle variabili di scena
+    @FXML
+    private Button bottoneContinua;
+
+
+    // funzione che controlla
 }
