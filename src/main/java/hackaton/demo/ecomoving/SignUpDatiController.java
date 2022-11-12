@@ -106,7 +106,7 @@ public class SignUpDatiController {
     }
 
     private boolean checkPassword() {
-        if(passwordFieldConfermaPassword.getText().equals(passwordFieldConfermaPassword.getText())){
+        if(passwordFieldConfermaPassword.getText().equals(passwordFieldPassword.getText())){
             return true;
         }
 

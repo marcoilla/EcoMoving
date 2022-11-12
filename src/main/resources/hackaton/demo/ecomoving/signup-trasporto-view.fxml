@@ -8,17 +8,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.SignUpTrasportoController">
    <children>
       <Label layoutX="89.0" layoutY="87.0" styleClass="titolo" text="TRASPORTO" />
       <VBox layoutX="77.0" layoutY="232.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="73.0">
          <children>
-            <TextField promptText="luogo di partenza" styleClass="field-testo">
+            <TextField fx:id="textFieldLuogoDiPartenza" promptText="luogo di partenza" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="luogo di lavoro" styleClass="field-testo">
+            <TextField fx:id="textFieldLuogoDiLavoro" promptText="luogo di lavoro" styleClass="field-testo">
                <VBox.margin>
                   <Insets bottom="30.0" />
                </VBox.margin>
@@ -28,28 +28,28 @@
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <CheckBox mnemonicParsing="false" text="BICICLETTA">
+            <CheckBox fx:id="checkBoxBiciclette" mnemonicParsing="false" text="BICICLETTA">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="PIEDI">
+            <CheckBox fx:id="checkBoxPiedi" mnemonicParsing="false" text="PIEDI">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="TRASPORTI PUBBLICI (TRENI, BUS, METRO, TRAM)">
+            <CheckBox fx:id="checkBoxMezziPubblici" mnemonicParsing="false" text="TRASPORTI PUBBLICI (TRENI, BUS, METRO, TRAM)">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="MACCHINA">
+            <CheckBox fx:id="checkBoxMacchine" mnemonicParsing="false" text="MACCHINA">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </CheckBox>
          </children>
       </VBox>
-      <Button layoutX="200.0" layoutY="568.0" mnemonicParsing="false" styleClass="bottone-sign-up" text="CONFERMA" />
+      <Button fx:id="bottoneConferma" layoutX="201.0" layoutY="570.0" mnemonicParsing="false" onAction="#switchToScenaSmartWorking" styleClass="bottone-sign-up" text="CONTINUA" />
    </children>
 </AnchorPane>
