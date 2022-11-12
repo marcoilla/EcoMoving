@@ -1,36 +1,33 @@
 package hackaton.demo.ecomoving;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
+import javafx.scene.control.*;
+
+import java.io.IOException;
 
 public class LoginController {
-    // dichiarazione delle variabili di scena
-    @FXML
-    private Button bottonLogin;
+    MainApp mainApp;
 
     @FXML
-    private Button bottoneSignUp;
+    TextField textFieldUsername;
 
+    @FXML
+    PasswordField passwordFieldPassword;
 
     // funzione che fa il switch di scena per la schermata di sign up
     @FXML
-    private void switchSceneSignUp() {
-        Stage stage;
-        Parent root = null;
-        stage = (Stage) bottonLogin.getScene().getWindow();
-        try {
-            root = FXMLLoader.load(getClass().getResource("signup-dati-view.fxml"));
-        } catch (Exception e) {
-            System.out.println("ERRORE, non carica il file");
+    private void switchSceneSignUp() throws IOException {
+        mainApp.singUpUtente();
+    }
+
+    @FXML
+    private void loginUtente() {
+        if(mainApp.getGestionaleUtenti().checkLogin(textFieldUsername.getText(), passwordFieldPassword.getText())) {
+            mainApp.faiqualcosa();
         }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    }
+
+    public void setMainApp(MainApp mainApp) {
+        this.mainApp = mainApp;
     }
 }
