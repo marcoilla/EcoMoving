@@ -16,16 +16,17 @@
 }
 
 .bottone-sign-in {
-    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #8f00ff, #ff1e1e);
     -fx-background-radius: 25px;
 
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-font-size: 15px;
 }
 
 .bottone-sign-in:hover {
-    -fx-text-fill: #ff5500;
+    -fx-font-size: 16px;
+    -fx-text-fill: #white;
 }
 
 .bottone-sign-up {

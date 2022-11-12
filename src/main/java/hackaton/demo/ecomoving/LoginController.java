@@ -22,10 +22,9 @@ public class LoginController {
     }
 
     @FXML
-    private void loginUtente() {
+    private void loginUtente() throws IOException {
         if(mainApp.getGestionaleUtenti().checkLogin(textFieldUsernameEmail.getText(), passwordFieldPassword.getText())) {
-            //mainApp.faiqualcosa();
-            System.out.println("Login");
+            mainApp.mainPage();
         }
     }
 

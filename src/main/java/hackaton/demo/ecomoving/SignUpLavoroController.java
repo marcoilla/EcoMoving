@@ -71,8 +71,6 @@ public class SignUpLavoroController implements Initializable {
 
             mainApp.getGestionaleUtenti().addUtente(mainApp.getUtenteTest());
 
-            System.out.println(mainApp.getGestionaleUtenti().getUtente(1).toString());
-
             mainApp.loginUtente();
         }
         else{

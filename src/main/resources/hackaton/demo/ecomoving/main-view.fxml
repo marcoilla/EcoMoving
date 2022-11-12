@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background" stylesheets="@css/mainview-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.MainViewController">
+   <children>
+      <Pane prefHeight="93.0" prefWidth="500.0" styleClass="pane-top">
+         <children>
+            <Label layoutX="22.0" layoutY="11.0" prefHeight="72.0" prefWidth="345.0" styleClass="titolo" text="ECO MOVING">
+               <font>
+                  <Font name="Lohit Bengali" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="55.0" fitWidth="48.0" layoutX="422.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/585e4bf3cb11b227491c339a.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="30.0" layoutY="142.0" prefHeight="127.0" prefWidth="440.0" styleClass="green-box">
+         <children>
+            <Label layoutX="112.0" layoutY="14.0" prefHeight="34.0" prefWidth="314.0" text="Usa la bicicletta">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="55.0" text="Durata: 21 min" />
+            <Label layoutX="112.0" layoutY="80.0" text="Punti green: +120" />
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/1024px-Italian_traffic_signs_-_icona_bicicletta-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="178.0" layoutY="109.0" prefHeight="24.0" prefWidth="145.0" text="Scelta consigliata:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Pane layoutX="30.0" layoutY="287.0" prefHeight="127.0" prefWidth="440.0" styleClass="yellow-box">
+         <children>
+            <Label layoutX="112.0" layoutY="14.0" prefHeight="34.0" prefWidth="314.0" text="Vai con un collega">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="55.0" text="Durata: 19 min" />
+            <Label layoutX="112.0" layoutY="82.0" text="Punti green: +60" />
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/1024px-Italian_traffic_signs_-_icona_auto-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="30.0" layoutY="435.0" prefHeight="127.0" prefWidth="440.0" styleClass="yellow-box">
+         <children>
+            <Label layoutX="112.0" layoutY="14.0" prefHeight="34.0" prefWidth="314.0" text="Usa il pullman">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="55.0" text="Durata: 25 min" />
+            <Label layoutX="112.0" layoutY="82.0" text="Punti green: +35" />
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/1024px-Italian_traffic_signs_-_icona_autobus_extraurbano-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="581.0" prefHeight="127.0" prefWidth="440.0" styleClass="red-box">
+         <children>
+            <Label layoutX="112.0" layoutY="14.0" prefHeight="34.0" prefWidth="314.0" text="Vai con la tua macchina">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="55.0" text="Durata: 21 min" />
+            <Label layoutX="112.0" layoutY="84.0" text="Punti green: 0" />
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/1024px-Italian_traffic_signs_-_icona_auto-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button layoutX="31.0" layoutY="742.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="440.0" styleClass="bottone-logout" stylesheets="@css/mainview-style.css" text="Logout" />
+   </children>
+</AnchorPane>

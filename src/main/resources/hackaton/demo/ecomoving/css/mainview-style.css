@@ -1,0 +1,39 @@
+.background {
+    -fx-background-color: white;
+}
+
+.pane-top {
+    -fx-background-color: #ff7c00;
+}
+
+.titolo {
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(from 25% 25% to 100% 100%, #8f00ff, #ff1e1e);
+
+    -fx-font-family: "Birds of paradise";
+}
+
+.green-box {
+    -fx-background-color: #27e527;
+    -fx-background-radius: 10px;
+}
+
+.yellow-box {
+    -fx-background-color: #eedd16;
+    -fx-background-radius: 10px;
+}
+
+.red-box {
+    -fx-background-color: #e52d27;
+    -fx-background-radius: 10px;
+}
+
+.bottone-logout {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #8f00ff, #ff1e1e);
+    -fx-background-radius: 25px;
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}

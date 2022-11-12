@@ -1,6 +1,5 @@
 package hackaton.demo.ecomoving;
 
-import hackaton.demo.ecomoving.API.Meteo;
 import hackaton.demo.ecomoving.model.Gestionale;
 import hackaton.demo.ecomoving.model.Utente;
 import javafx.application.Application;
@@ -9,9 +8,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.Locale;
 
 public class MainApp extends Application {
     // dichiarazione della variabile gestionale che deve essere accessibile a tutti i controller
@@ -64,17 +60,24 @@ public class MainApp extends Application {
         loginController.setMainApp(this);
     }
 
+    public void mainPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 800);
+        mainWindow.close(); // chiusura login
+        mainWindow = new Stage(); // creazione di una nuova finestra per visualizzarla al centro
+        mainWindow.setTitle("EcoMoving");
+        mainWindow.setScene(scene);
+        mainWindow.setResizable(false);
+        mainWindow.show();
+
+        // creazione e set del controller
+        MainViewController mainViewCOntroller = fxmlLoader.getController();
+        mainViewCOntroller.setMainApp(this);
+    }
+
     public static void main(String[] args) throws IOException, InterruptedException {
-        aggiungiUtenteTest();
         launch();
     }
-
-    public static void aggiungiUtenteTest() throws IOException, InterruptedException {
-        Utente utenteTest = new Utente("marcoilla", "ocram1", "test@test.com", LocalDate.of(2004, 11, 25), "Marco", "Illarietti");
-        gestionaleUtenti.addUtente(utenteTest);
-        Meteo.getMeteo();
-    }
-
     public Utente getUtenteTest() {
         return utenteTest;
     }

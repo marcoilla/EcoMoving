@@ -50,6 +50,6 @@
             </CheckBox>
          </children>
       </VBox>
-      <Button fx:id="bottoneConferma" layoutX="201.0" layoutY="570.0" mnemonicParsing="false" onAction="#switchToScenaSmartWorking" styleClass="bottone-sign-up" text="CONTINUA" />
+      <Button fx:id="bottoneConferma" layoutX="75.0" layoutY="570.0" mnemonicParsing="false" onAction="#switchToScenaSmartWorking" prefHeight="31.0" prefWidth="350.0" styleClass="bottone-sign-up" text="CONTINUA" />
    </children>
 </AnchorPane>

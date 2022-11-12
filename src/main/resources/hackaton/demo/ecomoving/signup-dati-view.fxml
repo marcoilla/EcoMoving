@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.SignUpDatiController">
    <children>
-      <VBox layoutX="75.0" layoutY="224.0" prefHeight="373.0" prefWidth="350.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+      <VBox layoutX="106.0" layoutY="208.0" prefHeight="385.0" prefWidth="289.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="105.0">
          <children>
             <TextField fx:id="textFieldNome" alignment="CENTER" promptText="nome" styleClass="field-testo">
                <VBox.margin>
@@ -50,6 +50,6 @@
          </children>
       </VBox>
       <Label layoutX="137.0" layoutY="83.0" styleClass="titolo" stylesheets="@css/signup-style.css" text="SIGN UP" />
-      <Button fx:id="bottoneContinua" layoutX="199.0" layoutY="669.0" mnemonicParsing="false" onAction="#switchScenaTrasporto" styleClass="bottone-sign-up" text="CONTINUA" />
+      <Button fx:id="bottoneContinua" layoutX="106.0" layoutY="593.0" mnemonicParsing="false" onAction="#switchScenaTrasporto" prefHeight="31.0" prefWidth="289.0" styleClass="bottone-sign-up" text="CONTINUA" />
    </children>
 </AnchorPane>
