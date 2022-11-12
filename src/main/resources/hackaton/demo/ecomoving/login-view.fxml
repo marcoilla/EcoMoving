@@ -8,11 +8,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/login-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/login-style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.LoginController">
    <children>
-      <TextField alignment="CENTER" layoutX="130.0" layoutY="286.0" prefHeight="33.0" prefWidth="247.0" promptText="username o email" styleClass="field-testo" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
-      <PasswordField alignment="CENTER" layoutX="130.0" layoutY="342.0" promptText="password" styleClass="field-testo" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
-      <Button fx:id="bottonLogin" layoutX="131.0" layoutY="400.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="240.0" styleClass="bottone-sign-in" text="LOGIN" />
+      <TextField fx:id="textFieldUsernameEmail" alignment="CENTER" layoutX="130.0" layoutY="286.0" prefHeight="33.0" prefWidth="247.0" promptText="username o email" styleClass="field-testo" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
+      <PasswordField fx:id="passwordFieldPassword" alignment="CENTER" layoutX="130.0" layoutY="342.0" promptText="password" styleClass="field-testo" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
+      <Button fx:id="bottonLogin" layoutX="131.0" layoutY="400.0" mnemonicParsing="false" onAction="#loginUtente" prefHeight="31.0" prefWidth="240.0" styleClass="bottone-sign-in" text="LOGIN" />
       <Button fx:id="bottoneSignUp" layoutX="208.0" layoutY="516.0" mnemonicParsing="false" onAction="#switchSceneSignUp" prefHeight="31.0" prefWidth="85.0" styleClass="bottone-sign-up" text="SIGN UP" />
       <Label layoutX="188.0" layoutY="498.0" text="Non hai un account?" textFill="WHITE" />
       <ImageView fitHeight="246.0" fitWidth="263.0" layoutX="126.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">

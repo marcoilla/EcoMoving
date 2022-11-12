@@ -1,5 +1,6 @@
 package hackaton.demo.ecomoving;
 
+import hackaton.demo.ecomoving.model.Gestionale;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -8,8 +9,10 @@ import java.io.IOException;
 public class LoginController {
     MainApp mainApp;
 
+    Gestionale gestionaleUtenti;
+
     @FXML
-    TextField textFieldUsername;
+    TextField textFieldUsernameEmail;
 
     @FXML
     PasswordField passwordFieldPassword;
@@ -22,12 +25,14 @@ public class LoginController {
 
     @FXML
     private void loginUtente() {
-        if(mainApp.getGestionaleUtenti().checkLogin(textFieldUsername.getText(), passwordFieldPassword.getText())) {
-            mainApp.faiqualcosa();
+        if(gestionaleUtenti.checkLogin(textFieldUsernameEmail.getText(), passwordFieldPassword.getText())) {
+            //mainApp.faiqualcosa();
+            System.out.println("Login");
         }
     }
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
+        gestionaleUtenti = mainApp.getGestionaleUtenti();
     }
 }

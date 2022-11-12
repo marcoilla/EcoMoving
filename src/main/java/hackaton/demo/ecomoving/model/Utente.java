@@ -1,7 +1,9 @@
 package hackaton.demo.ecomoving.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
 
 public class Utente {
@@ -9,7 +11,7 @@ public class Utente {
     private String username;
     private String password;
     private String email;
-    private Date dataDiNascita;
+    private LocalDate dataDiNascita;
     private String nome;
     private String cognome;
 
@@ -20,7 +22,7 @@ public class Utente {
     private ArrayList<String> mezziTrasporto;
 
     // costruttore
-    public Utente(String username, String password, String email, Date dataDiNascita, String nome, String cognome) {
+    public Utente(String username, String password, String email, LocalDate dataDiNascita, String nome, String cognome) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -54,11 +56,11 @@ public class Utente {
         this.email = email;
     }
 
-    public Date getDataDiNascita() {
+    public LocalDate getDataDiNascita() {
         return dataDiNascita;
     }
 
-    public void setDataDiNascita(Date dataDiNascita) {
+    public void setDataDiNascita(LocalDate dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
 

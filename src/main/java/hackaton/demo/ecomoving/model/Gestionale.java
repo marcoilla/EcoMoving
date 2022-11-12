@@ -14,9 +14,27 @@ public class Gestionale {
         listaUtenti.add(u);
     }
 
-    public boolean checkLogin(String username, String password) {
+    public boolean checkLogin(String string, String password) {
+        System.out.println(checkLoginUsername(string, password));
+        System.out.println(checkLoginEmail(string, password));
+        return checkLoginUsername(string, password) || checkLoginEmail(string, password);
+    }
+
+    public boolean checkLoginUsername(String username, String password) {
         for(Utente u : listaUtenti){
             if(u.getUsername().equals(username)) {
+                if(u.getPassword().equals(password)){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean checkLoginEmail(String email, String password) {
+        for(Utente u : listaUtenti){
+            if(u.getEmail().equals(email)) {
                 if(u.getPassword().equals(password)){
                     return true;
                 }
