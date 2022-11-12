@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" styleClass="background-color" stylesheets="@css/signup-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hackaton.demo.ecomoving.SignUpLavoroController">
+   <children>
+      <Label alignment="CENTER" layoutY="41.0" prefHeight="78.0" prefWidth="522.0" styleClass="titolo" text="INFORMAZIONI" AnchorPane.leftAnchor="0.0" />
+      <Label layoutX="147.0" layoutY="108.0" styleClass="titolo" text="LAVORO" />
+      <Label layoutX="89.0" layoutY="221.0" styleClass="testo-normale" text="Hai la possibilità di lavorare in smartworking?" />
+      <CheckBox fx:id="checkBoxSiSmartWorking" layoutX="183.0" layoutY="259.0" mnemonicParsing="false" onAction="#selectCheckBox" text="SI" AnchorPane.leftAnchor="183.0" />
+      <CheckBox fx:id="checkBoxNoSmartWorking" layoutX="303.0" layoutY="259.0" mnemonicParsing="false" onAction="#selectCheckBox" prefHeight="18.0" prefWidth="81.0" text="NO" AnchorPane.leftAnchor="303.0" AnchorPane.rightAnchor="138.0" />
+      <Label layoutX="205.0" layoutY="331.0" styleClass="testo-normale" text="A che ora inizi?" />
+      <Label layoutX="199.0" layoutY="442.0" styleClass="testo-normale" text="A che ora finisci?" />
+      <Button fx:id="bottoneConfermaSignUp" layoutX="164.0" layoutY="587.0" mnemonicParsing="false" onAction="#confermaSignUp" styleClass="bottone-sign-up" text="CONFERMA ISCRIZIONE" />
+      <ComboBox fx:id="choiceBoxOraIngresso" layoutX="89.0" layoutY="374.0" prefWidth="150.0" />
+      <ComboBox fx:id="choiceBoxMinutiIngresso" layoutX="285.0" layoutY="374.0" prefWidth="150.0" />
+      <ComboBox fx:id="choiceBoxOraUscita" layoutX="89.0" layoutY="496.0" prefWidth="150.0" />
+      <ComboBox fx:id="choiceBoxMinutiUscita" layoutX="285.0" layoutY="496.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

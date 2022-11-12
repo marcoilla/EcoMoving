@@ -63,3 +63,12 @@
     -fx-background-color: white;
 }
 
+.combo-box .context-menu { -fx-background-color: #ffffff; }
+.combo-box .menu-item:focused { -fx-background-color: orange; }
+.combo-box .menu-item > .label { -fx-text-fill: white; }
+.combo-box .menu-item:focused > .label { -fx-text-fill: #ff7c00; }
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-mark-color: orange; // arrow color
+}
+.combo-box .label { -fx-text-fill: white; }
