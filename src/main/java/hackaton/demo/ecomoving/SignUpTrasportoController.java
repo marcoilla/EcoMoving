@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class SignUpTrasportoController {
     // dichiarazione degli oggetti di scena
     @FXML
@@ -30,19 +32,45 @@ public class SignUpTrasportoController {
     @FXML
     private Button bottoneConferma;
 
+    private MainApp mainApp;
+
     //submit del sign up
     @FXML
     public void switchToScenaSmartWorking() {
         if (checkCampi()) {
             Stage stage;
-            Parent root = null;
+            Scene scene = null;
             stage = (Stage) bottoneConferma.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("signup-smartworking-view.fxml"));
             try {
-                root = FXMLLoader.load(getClass().getResource("signup-smartworking-view.fxml"));
-            } catch (Exception e) {
-                System.out.println("ERRORE, non carica il file");
+                scene = new Scene(fxmlLoader.load(),500,800);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            Scene scene = new Scene(root);
+
+            SignUpLavoroController signUpLavoroController = fxmlLoader.getController();
+            signUpLavoroController.setMainApp(mainApp);
+
+
+            mainApp.getUtenteTest().setLuogoDiResidenza(textFieldLuogoDiPartenza.getText());
+            mainApp.getUtenteTest().setLuogoDiLavoro(textFieldLuogoDiLavoro.getText());
+
+            if(checkBoxBiciclette.isSelected()){
+                mainApp.getUtenteTest().getMezziTrasporto().add("biciclette");
+            }
+
+            if(checkBoxPiedi.isSelected()){
+                mainApp.getUtenteTest().getMezziTrasporto().add("piedi");
+            }
+
+            if(checkBoxMacchine.isSelected()) {
+                mainApp.getUtenteTest().getMezziTrasporto().add("macchina");
+            }
+
+            if(checkBoxMezziPubblici.isSelected()){
+                mainApp.getUtenteTest().getMezziTrasporto().add("mezzi");
+            }
+
             stage.setScene(scene);
             stage.show();
         } else {
@@ -65,5 +93,9 @@ public class SignUpTrasportoController {
         }
 
         return true;
+    }
+
+    public void setMainApp(MainApp mainApp){
+        this.mainApp = mainApp;
     }
 }

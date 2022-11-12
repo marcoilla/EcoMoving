@@ -4,9 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -37,6 +41,8 @@ public class SignUpLavoroController implements Initializable {
     private ObservableList<Integer> listaMinuti = FXCollections.observableArrayList();
     private ObservableList<Integer> listaOre = FXCollections.observableArrayList();
 
+    private MainApp mainApp;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         for(int i=1; i<=59; i++){
@@ -54,9 +60,20 @@ public class SignUpLavoroController implements Initializable {
     }
 
     @FXML
-    public void confermaSignUp() {
+    public void confermaSignUp() throws IOException {
         if(checkCampi()) {
-            System.out.println("Login Effettuato");
+            if(checkBoxSiSmartWorking.isSelected()){
+                mainApp.getUtenteTest().setCanSmartWork(true);
+            }
+            if(checkBoxNoSmartWorking.isSelected()){
+                mainApp.getUtenteTest().setCanSmartWork(false);
+            }
+
+            mainApp.getGestionaleUtenti().addUtente(mainApp.getUtenteTest());
+
+            System.out.println(mainApp.getGestionaleUtenti().getUtente(1).toString());
+
+            mainApp.loginUtente();
         }
         else{
             Alert alert = new Alert(Alert.AlertType.WARNING, "Compilare tutti i campi correttamente.", ButtonType.OK, ButtonType.CANCEL);
@@ -98,5 +115,9 @@ public class SignUpLavoroController implements Initializable {
         if(!checkBoxNoSmartWorking.isSelected()){
             checkBoxSiSmartWorking.setDisable(false);
         }
+    }
+
+    public void setMainApp(MainApp mainApp){
+        this.mainApp = mainApp;
     }
 }

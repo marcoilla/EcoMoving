@@ -44,6 +44,10 @@ public class Gestionale {
         return false;
     }
 
+    public Utente getUtente(int i){
+        return listaUtenti.get(i);
+    }
+
     // check sign up è la funzione che verifica che l'utente inserito non contenga un username o una mail già utilizzate
     // ritorna TRUE se si può andare AVANTI
     // ritorna FALSE se se NON SI PUO PROSEGUIRE

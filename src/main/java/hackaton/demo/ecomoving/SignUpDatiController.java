@@ -1,11 +1,15 @@
 package hackaton.demo.ecomoving;
 
+import hackaton.demo.ecomoving.model.Utente;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.time.LocalDate;
 
 public class SignUpDatiController {
     // dichiarazione delle variabili di scena
@@ -33,7 +37,7 @@ public class SignUpDatiController {
     @FXML
     private PasswordField passwordFieldConfermaPassword;
 
-    MainApp mainApp;
+    private MainApp mainApp;
 
     private Object AlertType;
 
@@ -42,15 +46,23 @@ public class SignUpDatiController {
     public void switchScenaTrasporto() {
         if(checkPassword()) {
             if (checkCampi()) {
+                // creazione dell'utente
+                mainApp.setUtenteTest(new Utente(textFieldUsername.getText(),passwordFieldPassword.getText(), textFieldEmail.getText(), getDate(textFieldDataDiNascita.getText()),textFieldNome.getText(),textFieldCognome.getText()));
+
                 Stage stage;
-                Parent root = null;
                 stage = (Stage) bottoneContinua.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("signup-trasporto-view.fxml"));
+
+                Scene scene = null;
                 try {
-                    root = FXMLLoader.load(getClass().getResource("signup-trasporto-view.fxml"));
-                } catch (Exception e) {
-                    System.out.println("ERRORE, non carica il file");
+                    scene = new Scene(fxmlLoader.load(), 500, 800);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
-                Scene scene = new Scene(root);
+
+                SignUpTrasportoController signUpTrasportoController = fxmlLoader.getController();
+                signUpTrasportoController.setMainApp(mainApp);
+
                 stage.setScene(scene);
                 stage.show();
             } else {
@@ -111,6 +123,10 @@ public class SignUpDatiController {
         }
 
         return false;
+    }
+
+    public LocalDate getDate(String date) {
+        return LocalDate.parse(date);
     }
 
     public void setMainApp(MainApp mainApp){

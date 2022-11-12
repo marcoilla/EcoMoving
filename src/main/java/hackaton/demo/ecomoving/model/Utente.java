@@ -19,6 +19,8 @@ public class Utente {
 
     private String luogoDiLavoro;
 
+    private boolean canSmartWork;
+
     private ArrayList<String> mezziTrasporto;
 
     // costruttore
@@ -29,6 +31,7 @@ public class Utente {
         this.dataDiNascita = dataDiNascita;
         this.nome = nome;
         this.cognome = cognome;
+        this.mezziTrasporto = new ArrayList<>();
     }
 
     // getter e setter
@@ -102,6 +105,30 @@ public class Utente {
 
     public void setMezziTrasporto(ArrayList<String> mezziTrasporto) {
         this.mezziTrasporto = mezziTrasporto;
+    }
+
+    public boolean isCanSmartWork() {
+        return canSmartWork;
+    }
+
+    public void setCanSmartWork(boolean canSmartWork) {
+        this.canSmartWork = canSmartWork;
+    }
+
+    @Override
+    public String toString() {
+        return "Utente{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", dataDiNascita=" + dataDiNascita +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", luogoDiResidenza='" + luogoDiResidenza + '\'' +
+                ", luogoDiLavoro='" + luogoDiLavoro + '\'' +
+                ", canSmartWork=" + canSmartWork +
+                ", mezziTrasporto=" + mezziTrasporto +
+                '}';
     }
 
     @Override

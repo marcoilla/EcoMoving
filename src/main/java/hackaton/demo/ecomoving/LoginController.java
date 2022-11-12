@@ -9,8 +9,6 @@ import java.io.IOException;
 public class LoginController {
     MainApp mainApp;
 
-    Gestionale gestionaleUtenti;
-
     @FXML
     TextField textFieldUsernameEmail;
 
@@ -25,7 +23,7 @@ public class LoginController {
 
     @FXML
     private void loginUtente() {
-        if(gestionaleUtenti.checkLogin(textFieldUsernameEmail.getText(), passwordFieldPassword.getText())) {
+        if(mainApp.getGestionaleUtenti().checkLogin(textFieldUsernameEmail.getText(), passwordFieldPassword.getText())) {
             //mainApp.faiqualcosa();
             System.out.println("Login");
         }
@@ -33,6 +31,5 @@ public class LoginController {
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
-        gestionaleUtenti = mainApp.getGestionaleUtenti();
     }
 }
